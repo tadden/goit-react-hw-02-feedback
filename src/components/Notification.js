@@ -1,7 +1,10 @@
-function Notification(params) {
+
+
+function Notification() {
     return (
         <p>No feedback given</p>
     );
 }
+
 
 export default Notification;

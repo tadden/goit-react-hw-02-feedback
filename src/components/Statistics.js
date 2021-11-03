@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Options from './Options';
-// import Notification from './Notification';
+import Notification from './Notification';
+import s from './Statistic.module.css'
+
 
 class Statistics extends Component {
     state = {
@@ -9,9 +11,37 @@ class Statistics extends Component {
         bad: 0
     };
 
-    // onGoodBtn() => {
-    
-    // }
+    onGoodBtn = () => {
+        this.setState(prevState => {
+            return {
+                good: prevState.good + 1,
+            };
+        });
+    };
+    onNeutralBtn = () => {
+        this.setState(prevState => {
+            return {
+                neutral: prevState.neutral + 1,
+            };
+        });
+    };
+    onBadBtn = () => {
+        this.setState(prevState => {
+            return {
+                bad: prevState.bad + 1,
+            };
+        });
+    };
+
+    countTotal = () => {
+        const totalFeedbacks = this.state.good + this.state.neutral + this.state.bad;
+        return totalFeedbacks;
+    }
+
+    countPositiveFeedback = () => {
+        const persantage = (this.state.good / this.countTotal()) * 100;
+        return persantage.toFixed();
+    }
 
     render() {
         return (
@@ -24,19 +54,34 @@ class Statistics extends Component {
                 <>
                     <h2>Statistic</h2>
                 </>
-                <p>
-                    <span>Good</span>
+
+                {this.countTotal() === 0 ? <Notification/> : (
+                    <>
+                    <p>
+                    <span className={s.score}>Good:</span>
                     <span>{this.state.good}</span>
                 </p>
                 <p>
-                    <span>Neutral</span>
+                    <span className={s.score}>Neutral:</span>
                     <span>{this.state.neutral}</span>
                 </p>
                 <p>
-                    <span>Bad</span>
+                    <span className={s.score}>Bad:</span>
                     <span>{this.state.bad}</span>
                 </p>
-            </div>
+                <p>
+                    <span className={s.score}>Total:</span>
+                    <span>{this.countTotal()}</span>
+                </p>
+                <p>
+                    <span className={s.score}>Positive feedback</span>
+                    <span>{this.countPositiveFeedback()}%</span>
+                </p>
+            
+                    </>
+                    
+            )}
+             </div>   
         );
     }
 }

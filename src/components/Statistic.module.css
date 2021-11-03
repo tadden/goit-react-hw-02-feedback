@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 20px;
+
+  border: 2px solid black;
+}
+
+.btn__container {
+  margin: 20px 0;
+}
+
+.btn {
+  cursor: pointer;
+}
+.btn:not(:last-child) {
+  margin-right: 15px;
+}
+
+.score {
+  margin-right: 5px;
+}
