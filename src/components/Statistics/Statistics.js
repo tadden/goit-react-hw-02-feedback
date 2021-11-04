@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Options from '../Options/Options';
-import Notification from '../Notification/Notification';
+import Options from '../Options';
+import Notification from '../Notification';
 import s from './Statistic.module.css'
 
 

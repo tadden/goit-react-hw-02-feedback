@@ -1,6 +1,6 @@
 import './App.css';
-import SectionTitle from './components/SectionTitle/SectionTitle'
-import Statistics from 'components/Statistics/Statistics';
+import SectionTitle from './components/SectionTitle'
+import Statistics from 'components/Statistics';
 
 export default function App() {
   return (<div>
