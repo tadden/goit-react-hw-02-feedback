@@ -1,17 +1,23 @@
 import propTypes from 'prop-types';
-import s from './Statistic.module.css'
+import s from './Options.module.css'
 
 
 function Options({ onGoodBtn, onNeutralBtn, onBadBtn }) {
     return (
-        <div className={s.btn__container}>
-            <button type="button" onClick={onGoodBtn} className={s.btn}>
+        <div className={s.container}>
+            <button type="button"
+                onClick={onGoodBtn}
+                className={s.btn__green}>
                 Good
             </button>
-            <button type="button" onClick={onNeutralBtn} className={s.btn}>
+            <button type="button"
+                onClick={onNeutralBtn}
+                className={s.btn__yellow}>
                 Neutral
             </button>
-            <button type="button" onClick={onBadBtn} className={s.btn} >
+            <button type="button"
+                onClick={onBadBtn}
+                className={s.btn__red} >
                 Bad
             </button>
         </div>

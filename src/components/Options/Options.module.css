@@ -1,0 +1,46 @@
+.container {
+  margin-bottom: 20px;
+}
+
+.btn__green {
+  color: rgb(0, 0, 0);
+  border: none;
+  width: 85px;
+  height: 40px;
+  background-color: green;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+.btn__green:focus,
+.btn__green:hover {
+  color: white;
+  transform: scale(1.05);
+}
+
+.btn__yellow {
+  color: rgb(0, 0, 0);
+  border: none;
+  width: 85px;
+  height: 40px;
+  background-color: rgb(255, 171, 44);
+  margin-right: 10px;
+  border-radius: 5px;
+}
+.btn__yellow:focus,
+.btn__yellow:hover {
+  color: white;
+  transform: scale(1.05);
+}
+.btn__red {
+  color: rgb(0, 0, 0);
+  border: none;
+  width: 85px;
+  height: 40px;
+  background-color: red;
+  border-radius: 5px;
+}
+.btn__red:focus,
+.btn__red:hover {
+  color: white;
+  transform: scale(1.05);
+}

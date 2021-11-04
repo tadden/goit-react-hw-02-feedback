@@ -11,18 +11,6 @@
 
   border: 2px solid black;
 }
-
-.btn__container {
-  margin: 20px 0;
-}
-
-.btn {
-  cursor: pointer;
-}
-.btn:not(:last-child) {
-  margin-right: 15px;
-}
-
-.score {
-  margin-right: 5px;
+.title {
+  margin-bottom: 20px;
 }
