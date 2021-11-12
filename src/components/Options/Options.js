@@ -2,32 +2,21 @@ import propTypes from 'prop-types';
 import s from './Options.module.css'
 
 
-function Options({ onGoodBtn, onNeutralBtn, onBadBtn }) {
+function Options({ options, onBtnClick }) {
     return (
-        <div className={s.container}>
-            <button type="button"
-                onClick={onGoodBtn}
-                className={s.btn__green}>
-                Good
-            </button>
-            <button type="button"
-                onClick={onNeutralBtn}
-                className={s.btn__yellow}>
-                Neutral
-            </button>
-            <button type="button"
-                onClick={onBadBtn}
-                className={s.btn__red} >
-                Bad
-            </button>
-        </div>
-    );
+    <div>
+      {options.map(option => (
+        <button className={s.btn} type="button" onClick={() => onBtnClick(option)}>
+          {option}
+        </button>
+      ))}
+    </div>
+  );
 }
 
 Options.propTypes = {
-  onGoodBtn: propTypes.func.isRequired,
-  onNeutralBtn: propTypes.func.isRequired,
-  onBadBtn: propTypes.func.isRequired,
+  options: propTypes.arrayOf(propTypes.string.isRequired).isRequired,
+  onBtnClick: propTypes.func.isRequired,
 };
 
 export default Options;
